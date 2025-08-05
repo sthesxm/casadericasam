@@ -1,74 +1,57 @@
-﻿<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Entre no Grupo VIP</title>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){
+      n.callMethod ?
+      n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+    };
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+  }(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;n=f.fbq=function(){
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) : n.queue.push(arguments)
-      };
-      if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-    }(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1044164497704105');
+  fbq('track', 'PageView');
+</script>
 
-    fbq('init', '1044164497704105');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=1044164497704105&ev=PageView&noscript=1" />
-  </noscript>
-  <!-- End Meta Pixel Code -->
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1044164497704105&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #f5f5f5;
-    }
-    a.button {
-      padding: 20px 40px;
-      font-size: 1.5rem;
-      color: white;
-      background-color: #25D366;
-      border-radius: 8px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
-    a.button:hover {
-      background-color: #1ebe5d;
-    }
-  </style>
-</head>
-<body>
-  <a href="#" 
-     class="button"
-     onclick="event.preventDefault(); 
-              if(typeof fbq === 'function') {
-                fbq('track', 'Lead', { value: 0.00, currency: 'BRL' });
-              }
-              setTimeout(function() {
-                window.open('https://chat.whatsapp.com/FQEIM4uHZG6LrROYG4J4YC', '_blank');
-              }, 500);"
-  >
-    Entrar no grupo VIP do WhatsApp
-  </a>
-</body>
-</html>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+  }
+  a.button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.5rem; /* maior */
+    font-weight: bold;
+    color: white;
+    background-color: #25D366;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  a.button:hover {
+    background-color: #1ebe5d;
+  }
+</style>
 
-
+<!-- Botão com evento padrão Lead do Pixel e clique único -->
+<a href="#" 
+   onclick="event.preventDefault(); fbq('track', 'Lead', { value: 0.00, currency: 'BRL' }); setTimeout(function(){ window.open('https://chat.whatsapp.com/FQEIM4uHZG6LrROYG4J4YC', '_blank'); }, 500);"
+   class="button">
+  Entrar no grupo VIP do WhatsApp
+</a>
