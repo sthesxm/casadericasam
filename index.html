@@ -15,7 +15,7 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1044164497704105');
+  fbq('init', '1044164497704105'); // Pixel novo
   fbq('track', 'PageView');
   </script>
   <noscript>
@@ -38,7 +38,6 @@
       display: inline-block;
       padding: 20px 40px;
       font-size: 1.2rem;
-      font-weight: normal; /* Adicionado para garantir que NÃO fique em negrito */
       color: white;
       background-color: #25D366;
       border: none;
@@ -46,6 +45,7 @@
       text-decoration: none;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      font-weight: normal;
     }
     a.button:hover {
       background-color: #1ebe5d;
@@ -56,10 +56,11 @@
   <a 
     class="button" 
     href="#" 
-    onclick="event.preventDefault(); fbq('track', 'Lead'); setTimeout(function(){ window.open('https://chat.whatsapp.com/FMJKIyO5X4kHe1jA0fr8Py', '_blank'); }, 500);"
+    onclick="event.preventDefault(); fbq('track', 'LeadGrupo2'); setTimeout(function(){ window.open('https://chat.whatsapp.com/FMJKIyO5X4kHe1jA0fr8Py', '_blank'); }, 500);"
   >
     Entrar no Grupo VIP do WhatsApp
   </a>
 </body>
 </html>
+
 
